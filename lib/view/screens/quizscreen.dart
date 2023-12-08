@@ -105,17 +105,7 @@ class _QuizPageState extends State<QuizPage> {
                       Icons.keyboard_backspace_rounded,
                       color: Colors.red,
                     )),
-                GestureDetector(
-                  child: const Icon(Icons.help_outlined, color: Colors.red),
-                  onTap: () {
-                    QuickAlert.show(
-                      context: context,
-                      type: QuickAlertType.info,
-                      text: 'answer ${questions.length} computer questions.',
-                      confirmBtnColor: Colors.red,
-                    );
-                  },
-                ),
+                
               ],
             ),
             const SizedBox(
