@@ -1,9 +1,11 @@
 import 'dart:convert';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 import 'package:nuit_info/utlis/colors.dart';
 import 'package:nuit_info/utlis/styles.dart';
+import 'package:nuit_info/view/screens/home.dart';
 import 'package:nuit_info/view/widgets/primary_butt.dart';
 
 class LoginPage extends StatefulWidget {
@@ -94,8 +96,10 @@ class _LoginPageState extends State<LoginPage> {
                         width: 200,
                         child: PrimaryButton( 
                            text: 'Login',
-                          onPressed: () { 
-                            _login() ;
+                          onPressed: (){ 
+                            //_login() ;   
+                           Get.to(()=> const WelcomePagre()) ;
+
                           }),
                       ),
                     )

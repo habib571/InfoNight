@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_navigation/get_navigation.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nuit_info/utlis/colors.dart';
 import 'package:nuit_info/utlis/styles.dart';
+import 'package:nuit_info/view/screens/quizscreen.dart';
 import 'package:nuit_info/view/widgets/primary_butt.dart';
 
 class WelcomePagre extends StatefulWidget {
@@ -35,11 +38,11 @@ class _WelcomePagreState extends State<WelcomePagre> {
                     style: Styles().titleHeadingStyle(),
                   ),
                   Text(
-                    "The world is getting warmer and it's affecting my icy habitat",
+                    "But you can help!",
                     style: Styles().titleHeadingStyle(),
                   ),
                   Text(
-                    "But you can help!",
+                    "Click on yhe 'Play' butoon to save me",
                     style: Styles().titleHeadingStyle(),
                   ),
                   Expanded(
@@ -48,7 +51,9 @@ class _WelcomePagreState extends State<WelcomePagre> {
                       width: 200,
                       child: PrimaryButton( 
                          text: 'PLAY',
-                        onPressed: () {}),
+                        onPressed: () { 
+                          Get.to(()=> const  QuizPage()) ;
+                        }),
                     ),
                   )
                 ],

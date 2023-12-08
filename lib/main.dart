@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:nuit_info/utlis/colors.dart';
 import 'package:nuit_info/view/screens/home.dart';
 import 'package:nuit_info/view/screens/loginpage.dart';
 
-void main() {
+void main() async{ 
+    await Hive.initFlutter();
+  var box = await Hive.openBox('appBox');
   runApp(const MyApp());
 }
 
@@ -13,7 +17,7 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -34,7 +38,7 @@ class MyApp extends StatelessWidget {
     
        
       ),
-      home:LoginPage() 
+      home: const LoginPage()
     );
   }
 }
